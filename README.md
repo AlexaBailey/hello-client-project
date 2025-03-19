@@ -4,7 +4,7 @@
 Также компонент легко стилизуется и не происходит просачивания логики роутера внутрь вашего headless меню.
 
 ## Скриншоты
-<img src="https://github.com/user-attachments/assets/aa66b71f-5b50-472d-a22e-5c433b47f48d"  height="400"/>
+<img src="https://github.com/user-attachments/assets/aa66b71f-5b50-472d-a22e-5c433b47f48d"  height="500"/>
 <img src="https://github.com/user-attachments/assets/d6fb3f3c-e614-4b88-97d5-6332b2ba606e"  width="600"/>
 <img src="https://github.com/user-attachments/assets/9a7bba74-7626-4387-888b-a67ea5999ba2"  width="600"/>
 
