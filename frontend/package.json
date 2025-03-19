@@ -2,7 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://hello-client.github.io/hello-client-project",
+  "homepage": "https://AlexaBailey.github.io/hello-client-project",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d frontend/dist"
   },
   "dependencies": {
     "clsx": "^2.1.1",
