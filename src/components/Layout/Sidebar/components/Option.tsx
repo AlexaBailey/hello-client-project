@@ -56,7 +56,7 @@ const Option = ({
   };
   const {
     container = 'relative w-full flex flex-col',
-    linkContainer = 'relative flex items-center w-full h-12 px-3 rounded-md transition-all hover:bg-slate-100   cursor-pointer',
+    linkContainer = ' hover:text-blue-500 relative flex items-center w-full h-12 px-3 rounded-md transition-all hover:bg-slate-100   cursor-pointer',
     icon = 'text-xl',
     title: titleClass = 'ml-3 text-sm font-medium flex items-center gap-2 truncate',
     subpathContainer = 'ml-16',
@@ -65,7 +65,7 @@ const Option = ({
   } = classNames;
   return (
     <div className={container}>
-      <div className={`${linkContainer} hover:${activeColor} ${isOpen ? 'justify-start' : 'justify-center'}`}>
+      <div className={`${linkContainer} ${isOpen ? 'justify-start' : 'justify-center'}`}>
         <div
           className={`w-10 h-10 flex items-center justify-center group ${
             isParentActive(path) ? activeColor : inactiveColor
