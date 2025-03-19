@@ -2,7 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/AlexaBailey/hello-client-project",
+  "homepage": "https://hello-client.github.io/hello-client-project",
   "type": "module",
   "scripts": {
     "dev": "vite",
