@@ -45,6 +45,7 @@ const Option = ({
   const toggleSidePaths = () => {
     setOpenSubPaths((prev) => !prev);
   };
+
   const isActive = (currentPath: string) => {
     const normalizedPath = pathname === '/dashboard' ? '/' : pathname;
     return normalizedPath === currentPath;
@@ -55,7 +56,7 @@ const Option = ({
   };
   const {
     container = 'relative w-full flex flex-col',
-    linkContainer = 'relative flex items-center w-full h-12 px-3 rounded-md transition-all hover:bg-slate-100 cursor-pointer',
+    linkContainer = 'relative flex items-center w-full h-12 px-3 rounded-md transition-all hover:bg-slate-100   cursor-pointer',
     icon = 'text-xl',
     title: titleClass = 'ml-3 text-sm font-medium flex items-center gap-2 truncate',
     subpathContainer = 'ml-16',
@@ -64,9 +65,11 @@ const Option = ({
   } = classNames;
   return (
     <div className={container}>
-      <div className={`${linkContainer} ${isOpen ? 'justify-start' : 'justify-center'}`}>
+      <div className={`${linkContainer} hover:${activeColor} ${isOpen ? 'justify-start' : 'justify-center'}`}>
         <div
-          className={`w-10 h-10 flex items-center justify-center group ${isActive(path) ? activeColor : inactiveColor}`}
+          className={`w-10 h-10 flex items-center justify-center group ${
+            isParentActive(path) ? activeColor : inactiveColor
+          }`}
         >
           {/*Suboptions are being displayed on hover 
           to enable navigation both to main paths and to paths. Tooltip can be called both on click and hover if needed*/}
@@ -77,7 +80,7 @@ const Option = ({
               trigger={
                 <Link
                   to={path}
-                  className={`relative flex items-center w-full h-12 px-3 rounded-md transition-all hover:bg-slate-100 ${
+                  className={`relative flex items-center w-full h-12 px-3 rounded-md transition-all hover:bg-slate-100  ${
                     isParentActive(path) ? activeColor : inactiveColor
                   }`}
                 >
@@ -92,8 +95,8 @@ const Option = ({
                     <Link
                       to={subpath.path}
                       className={`text-sm transition ${
-                        isActive(subpath.path) ? activeColor : `text-slate-600 hover:${activeColor}`
-                      }`}
+                        isActive(subpath.path) ? activeColor : `text-slate-600 hover:${activeColor} `
+                      } `}
                     >
                       {subpath.title}
                     </Link>
@@ -115,7 +118,7 @@ const Option = ({
           >
             <Link
               to={path}
-              className={`truncate flex items-center gap-2 ${isParentActive(path) ? activeColor : inactiveColor}`}
+              className={`truncate flex items-center gap-2  ${isParentActive(path) ? activeColor : inactiveColor}`}
             >
               {title}
             </Link>
