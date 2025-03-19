@@ -60,9 +60,5 @@ export const MAIN_SIDEBAR_OPTIONS = [
     Icon: RiGroup2Fill,
     title: 'Groups',
     path: '/groups',
-    subpaths: [
-      { title: 'Active Groups', path: '/groups/active' },
-      { title: 'Archived Groups', path: '/groups/archived' },
-    ],
   },
 ];

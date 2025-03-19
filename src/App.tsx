@@ -25,8 +25,6 @@ function App() {
           <Route path="/visitors/new" element={<SubpathSlug title="New Visitors" />} />
           <Route path="/students/all" element={<SubpathSlug title="All Students" />} />
           <Route path="/students/enrollments" element={<SubpathSlug title="Enrollments" />} />
-          <Route path="/groups/active" element={<SubpathSlug title="Active Groups" />} />
-          <Route path="/groups/archived" element={<SubpathSlug title="Archived Groups" />} />
           <Route path="/professors/all" element={<SubpathSlug title="All Professors" />} />
           <Route path="/professors/departments" element={<SubpathSlug title="Departments" />} />
 

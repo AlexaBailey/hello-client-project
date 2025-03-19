@@ -73,7 +73,7 @@ const Option = ({
         >
           {/*Suboptions are being displayed on hover 
           to enable navigation both to main paths and to paths. Tooltip can be called both on click and hover if needed*/}
-          {!isOpen && subpaths ? (
+          {!isOpen ? (
             <Tooltip
               on={'hover'}
               contentStyle={{ zIndex: 1001 }}
@@ -89,20 +89,24 @@ const Option = ({
               }
               position="right center"
             >
-              <ul className={tooltipContent}>
-                {subpaths?.map((subpath) => (
-                  <li key={subpath.path}>
-                    <Link
-                      to={subpath.path}
-                      className={`text-sm transition ${
-                        isActive(subpath.path) ? activeColor : `text-slate-600 hover:${activeColor} `
-                      } `}
-                    >
-                      {subpath.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              {subpaths ? (
+                <ul className={tooltipContent}>
+                  {subpaths.map((subpath) => (
+                    <li key={subpath.path}>
+                      <Link
+                        to={subpath.path}
+                        className={`text-sm transition ${
+                          isActive(subpath.path) ? activeColor : `text-slate-600 hover:${activeColor} `
+                        } `}
+                      >
+                        {subpath.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <span>{title}</span>
+              )}
             </Tooltip>
           ) : (
             <Icon className={cn(icon, `${isParentActive(path) ? activeColor : ''}`)} />
